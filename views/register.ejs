@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaniflix - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/register.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="/img/kaniflix.png" alt="kaniflix-logo">
+        </div>
+        <div class="form-bg">
+            <div class="form-content">
+                <form action="" id="form" method="POST">
+                    <h1>Sign Up</h1>
+                    <div class="field">
+                        <input type="text" class="name input" name="name" autocomplete="off" spellcheck="false" placeholder=" ">
+                        <label for="name" class="label nlabel"><span class="input-label">Name</span></label>
+                        <div class="msg msgn"></div>
+                    </div>
+                    <div class="field">
+                        <input type="email" class="email input" name="email" autocomplete="off" spellcheck="false" placeholder=" ">
+                        <label for="email" class="label elabel"><span class="input-label">Email</span></label>
+                        <div class="msg msge"></div>
+                    </div>
+                    <div class="field">
+                        <input type="password" class="pass input" name="password" autocomplete="off" spellcheck="false" placeholder=" ">
+                        <label for="password" class="label plabel"><span class="input-label">Password</span></label>
+                        <img src="/img/hide.png" class="toggle1">
+                        <div class="msg msgp"></div>
+                    </div>
+                    <div class="field">
+                        <input type="password" class="cpass input" name="cpassword" autocomplete="off" spellcheck="false" placeholder=" " disabled>
+                        <label for="password" class="label cplabel"><span class="input-label">Confirm Password</span></label>
+                        <img src="/img/hide.png" class="toggle2">
+                        <div class="msg msgcp"></div>
+                    </div>
+                    <input type="submit" value="Sign Up" class="btn">
+                    <h4>Have an account ? <a href="/login">Login</a></h4>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

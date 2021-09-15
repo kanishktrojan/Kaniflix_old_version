@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaniflix - Email Verification</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/alert.css"> -->
+    <script src="js/verify.js" defer></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+   
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="/img/kaniflix.png" alt="kaniflix-logo">
+            <% if(success){ %> 
+            <div class="alert hide">
+                <span class="fas fa-exclamation-circle"></span>
+                <span class="msg"><%= success %></span>
+                <div class="close-btn">
+                   <span class="fas fa-times"></span>
+                </div>
+            </div>
+            <% } %> 
+        </div>
+        <div class="form-bg">
+            <div class="form-content">
+                <form action="/verify" id="form" method="POST">
+                    <h1>Email Verification</h1>
+                    <div class="field">
+                        <input type="number" class="code input" name="code" autocomplete="off" spellcheck="false" placeholder=" " oninput="javascript: if (this.value.length > this.maxLength) this.value = this.value.slice(0, this.maxLength);" onkeyup="if(this.value.length == this.maxLength) this.blur()" onfocus="if(this.value.length == this.maxLength) this.blur()" maxlength="5">
+                        <label for="code" class="label elabel"><span class="input-label">OTP</span></label>
+                        <% if(error){%> 
+                            <div class="otperr"><%= error%></div> 
+                        <% } %>     
+                    </div>
+                    <input type="submit" value="Verify" class="btn">
+                    <h4>Didn't get the code ? <a href="/resend"><span id="resend">Resend</span></a></h4>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

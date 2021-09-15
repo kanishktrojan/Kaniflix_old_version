@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Template</title>
+    <!-- <link rel="stylesheet" href="css/temp.css"> -->
+    <!-- <style>
+            *{
+        
+                margin: 0;
+                padding: 0;
+                /* border:1px solid #fff; */
+
+            }
+
+            .logo{
+
+                width:100%;
+            }
+
+
+            img{
+
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+                height:100px;
+                width: 250px;
+
+            }
+
+            .container{
+                display: flex;
+                /* justify-content: center; */
+                align-items: center;
+                flex-direction: column;
+            }
+
+            .content{
+                display:flex;
+                flex-direction: column;
+                /* justify-content: center; */
+                align-items: center;
+                border-radius: 5px;
+                border:1px solid grey;
+                width:70%;
+            }
+
+
+    </style> -->
+</head>
+<body>
+    <table style="width:100%">
+        <tr>
+          <th style="width:25%">&nbsp;</th>
+          <th style="width:50%">&nbsp;</th>
+          <th style="width:25%">&nbsp;</th>
+        </tr>
+        <tr style="height:max-content">
+          <td style="width:25%">&nbsp;</td>
+          <td style="margin:0;padding:0;width:50%; border-radius: 20px; border: 1px solid lightgrey; text-align: center;">
+            <div class="logo" style="background: url('https://ci3.googleusercontent.com/proxy/boWGXrIbukIIZIgMfYaVZSgWiaNRzHetJ6n9rs6xnR2CZgHiQHvfMwMMs1ZhQOvqXJfHWmgQ5qO_LcqkNHxJe2YwpQ=s0-d-e1-ft#https://www.gstatic.com/gumdrop/files/banner.png');background-position: center;background-size: cover;background-repeat: no-repeat;">
+                <img src="https://websiteimagespanel.000webhostapp.com/Kaniflix.png" alt="kaniflix-logo" style="height:100px; width: 250px;">
+                </div>
+            <div class="content" style="padding: 15px;">
+            <h2 style="font-size: 1.5rem;"> Hi <%= name %>,</h2>
+              <p style="font-size: 1.2rem;color:black"> Greeting from Kaniflix, We are glad to see you as our member...
+                Your verification code is <br><br><br><span style="font-size: 2rem;padding: 3px;"><b><%= otp %></b></span> </p></td>
+          <td style="width:25%">&nbsp;</td>
+        </tr>
+      </table>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaniflix - Sign In</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+    <script src="js/login.js" defer></script>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <img src="/img/kaniflix.png" alt="kaniflix-logo">
+            <% if(succeed){ %> 
+                <div class="galert hide">
+                    <span class="fas fa-check-circle"></span>
+                    <span class="msg"><%= succeed %></span>
+                    <div class="close-btn">
+                       <span class="fas fa-times"></span>
+                    </div>
+                </div>
+            <% } %> 
+        </div>
+        <div class="form-bg">
+            <div class="form-content">
+                <form action="/login" id="form" method="POST">
+                    <h1>Sign In</h1>
+                    <div class="field">
+                        <% if(messages.error){%> 
+                            <div class="msgerr"><%= messages.error %></div> 
+                        <% } %> 
+                        <input type="email" class="email input" name="email" autocomplete="off" spellcheck="false" placeholder=" ">
+                        <label for="email" class="label elabel"><span class="input-label">Email</span></label>
+                        <div class="msg msge"></div>
+                    </div>
+                    <div class="field">
+                        <input type="password" class="pass input" name="password" autocomplete="off" spellcheck="false" placeholder=" ">
+                        <label for="password" class="label plabel"><span class="input-label">Password</span></label>
+                        <img src="/img/hide.png" class="toggle">
+                        <div class="msg msgp"></div>
+                    </div>
+                    <input type="submit" value="Sign In" class="btn">
+                    <h4>New to Kaniflix ? <a href="/register">Register</a></h4>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
